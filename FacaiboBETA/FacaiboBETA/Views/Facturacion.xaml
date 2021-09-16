@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FacaiboBETA.Views.Facturacion">
+    <ContentPage.Content>
+        <StackLayout Padding="0"
+                     Orientation="Vertical"
+                     VerticalOptions="Start">
+            <Grid BackgroundColor="Red"
+                  Padding="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Label  Text="Facturacion"
+                            TextColor="White"
+                            FontSize="Large"
+                            Grid.Column="0"
+                            HorizontalOptions="Start"/>
+                <Button Text="O" 
+                            Background="Red" 
+                            BorderColor="White"
+                            Grid.Column="1"
+                            HorizontalOptions="End"
+                            TextColor="White"/>
+            </Grid>
+            <Frame BackgroundColor="#F5F5F5" CornerRadius="0" Margin="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" 
+                           Text="Buscar producto"
+                           HorizontalOptions="Start"
+                           FontSize="Medium"/>
+                    <Entry Grid.Column="1" 
+                           HorizontalOptions="FillAndExpand"
+                           FontSize="Small"/>
+                    <ListView Grid.Row="1" 
+                              Grid.Column="1">
+                        <ListView.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>mono</x:String>
+                                <x:String>monodroid</x:String>
+                                <x:String>monotouch</x:String>
+                                <x:String>monorail</x:String>
+                                <x:String>monodevelop</x:String>
+                                <x:String>monotone</x:String>
+                                <x:String>monopoly</x:String>
+                                <x:String>monomodal</x:String>
+                                <x:String>mononucleosis</x:String>
+                            </x:Array>
+                        </ListView.ItemsSource>
+                    </ListView>
+                </Grid>
+            </Frame>
+            <StackLayout Padding="15">
+            <!--<TableView>
+                <TableRoot>
+                    <TableSection>
+                        <ViewCell>
+                            <Grid Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                </Grid.RowDefinitions>
+                                
+                                <Label Text="Hola mundo" 
+                                       Grid.Column="0"
+                                       FontSize="Small"/>
+                                
+                                <Label Text="Hola mundo" 
+                                       Grid.Column="1"
+                                       FontSize="Small"/>
+                                
+                                <Label Text="Hola mundo" 
+                                       Grid.Column="2"
+                                       FontSize="Small"/>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell>
+                            <Grid Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                </Grid.RowDefinitions>
+                                <Label Text="Hola mundo" 
+                                       Grid.Column="0"
+                                       FontSize="Small"/>
+                                <Label Text="Hola mundo" 
+                                       Grid.Column="1"
+                                       FontSize="Small"/>
+                                <Label Text="Hola mundo" 
+                                       Grid.Column="2"
+                                       FontSize="Small"/>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView> -->
+                
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

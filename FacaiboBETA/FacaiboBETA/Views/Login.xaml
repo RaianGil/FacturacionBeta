@@ -4,9 +4,72 @@
              x:Class="FacaiboBETA.Views.Login">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Grid BackgroundColor="Red"
+                  Padding="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label 
+                    Text="Nombre App"
+                    TextColor="White"
+                    FontSize="Small"
+                    Grid.Column="0"/>
+                <Frame BorderColor="White" 
+                       WidthRequest="-10" 
+                       HeightRequest="-10"
+                       HorizontalOptions="EndAndExpand"
+                       Grid.Column="1">
+                    
+                </Frame>
+            </Grid>
+            <StackLayout VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Vertical"
+                    Padding="30">
+                <Label
+                    x:Name="lblTitulo"
+                    Text="Login"
+                    FontSize="Header"
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="30"/>
+                <Entry
+                    x:Name="entUsername"
+                    FontSize="Medium"
+                    WidthRequest="300"
+                    Placeholder="Username"
+                    Margin="10,20"
+                    />
+
+                <Entry
+                    x:Name="entPassword"
+                    FontSize="Medium"
+                    Placeholder="Password"
+                    Margin="10,20"
+                    />
+                <Grid
+                    Margin="10,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Switch Grid.Column="0">
+                        
+                    </Switch>
+                    <Label
+                        Text="Recuerda mi Usuario"
+                        Grid.Column="1"
+                        FontSize="Medium"
+                        />
+                </Grid>
+                <Button
+                    x:Name="btnAccesar"
+                    Text="Accesar"
+                    FontSize="Medium"
+                    Margin="10,20"
+                    Padding="10"
+                    />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

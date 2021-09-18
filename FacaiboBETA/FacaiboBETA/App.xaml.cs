@@ -14,7 +14,7 @@ namespace FacaiboBETA
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Login());
+            MainPage = new NavigationPage(new MainMenu());
         }
 
         protected override void OnStart()

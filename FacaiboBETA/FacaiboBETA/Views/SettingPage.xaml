@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FacaiboBETA.Views.SettingPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid 
+                BackgroundColor="Red"
+                Padding="5,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                <StackLayout Orientation="Horizontal">
+                    <ImageButton 
+                        x:Name="btnBack"
+                        Source="iconBack"
+                        HeightRequest="30"
+                        BackgroundColor="Red"
+                        IsVisible="True"
+                        Clicked="btnBack_Clicked"/>
+                    <Label 
+                        Text="Configuracion"
+                        TextColor="White"
+                        FontSize="Small"
+                        Grid.Column="0"
+                        VerticalOptions="Center"/>
+                </StackLayout>
+                <ImageButton 
+                    Grid.Column="1"
+                    x:Name="btnInfo"
+                    Source="iconInfo"
+                    HeightRequest="30"
+                    BackgroundColor="Red"
+                    HorizontalOptions="EndAndExpand"
+                    Clicked="btnInfo_Clicked"/>
+            </Grid>
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Padding="15">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Switch 
+                                Grid.Column="0"
+                                HorizontalOptions="Start"/>
+                            <Label
+                                Grid.Column="1"
+                                Text="Manejar Inventario" 
+                                FontSize="Medium"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Switch 
+                                Grid.Column="0"
+                                HorizontalOptions="Start"/>
+                            <Label
+                                Grid.Column="1"
+                                Text="Capturar Entidad Bancaria" 
+                                FontSize="Medium"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Switch 
+                                Grid.Column="0"
+                                HorizontalOptions="Start"/>
+                            <Label
+                                Grid.Column="1"
+                                Text="Capturar RNC" 
+                                FontSize="Medium"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Switch 
+                                Grid.Column="0"
+                                HorizontalOptions="Start"/>
+                            <Label
+                                Grid.Column="1"
+                                Text="Capturar Metodo de Pago" 
+                                FontSize="Medium"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Switch 
+                                Grid.Column="0"
+                                HorizontalOptions="Start"/>
+                            <Label
+                                Grid.Column="1"
+                                Text="Capturar Datos Clientes" 
+                                FontSize="Medium"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Switch 
+                                Grid.Column="0"
+                                HorizontalOptions="Start"/>
+                            <Label
+                                Grid.Column="1"
+                                Text="Capturar Impuestos" 
+                                FontSize="Medium"/>
+                        </Grid>
+                        <StackLayout VerticalOptions="End">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button 
+                                    Grid.Column="0"
+                                    Text="Guardar"/>
+                                <Button 
+                                    Grid.Column="1"
+                                    Text="Datos Empresa"/>
+                            </Grid>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button 
+                                    Grid.Column="0"
+                                    Text="Lista Productos"/>
+                                <Button 
+                                    Grid.Column="1"
+                                    Text="Datos Tablas"/>
+                            </Grid>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="FacaiboBETA.Components.Popup.AddClient">
+    <StackLayout>
+        <Frame
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand">
+            <StackLayout WidthRequest="350">
+                <Grid/>
+                <Label 
+                    Text="Nuevo cliente"
+                    FontSize="Large"
+                    FontAttributes="Bold"/>
+                <StackLayout Margin="0,10,0,0">
+                    <Label 
+                        Text="Razón Social"
+                        FontSize="Medium"/>
+                    <Entry
+                        x:Name="entClientName"
+                        FontSize="Medium"/>
+
+                    <Label 
+                        Text="Direccion Fiscal"
+                        FontSize="Medium"/>
+                    <Entry
+                        x:Name="entClientDir"
+                        FontSize="Medium"/>
+
+                    <Label 
+                        Text="Registro Fiscal"
+                        FontSize="Medium"/>
+                    <Entry
+                        x:Name="entClientRFiscal"
+                        FontSize="Medium"/>
+
+                    <Label 
+                        Text="Numero de Telefono"
+                        FontSize="Medium"/>
+                    <Entry
+                        x:Name="entClientPhoneNumber"
+                        FontSize="Medium"/>
+
+                    <Label 
+                        Text="Nombre del Contacto"
+                        FontSize="Medium"/>
+                    <Entry
+                        x:Name="entContactName"
+                        FontSize="Medium"/>
+
+                    <Button
+                        x:Name="btnSaveExit"
+                        Text="Grabar y Cerrar"
+                        Clicked="btnSaveExit_Clicked"/>
+
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</popup:PopupPage >

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using FacaiboBETA.Controllers;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +11,10 @@ namespace FacaiboBETA.Views
         public Facturacion()
         {
             InitializeComponent();
+        }
+        private void btnMenu_Clicked(object sender, EventArgs e)
+        {
+            eventLeftMenu.show();
         }
     }
 }

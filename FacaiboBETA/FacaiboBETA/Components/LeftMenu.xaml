@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FacaiboBETA.Components.LeftMenu"
+             Title="LeftMenu"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout 
+                Margin="10"/>
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <ViewCell>
+                            <Grid Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+                                <Frame BorderColor="White" 
+                                        WidthRequest="-10" 
+                                        HeightRequest="-10"
+                                        Grid.Column="0"/>
+                                    <Label 
+                                        Text="Home"
+                                        TextColor="Black"
+                                        FontSize="Small" 
+                                        Grid.Column="1"
+                                        VerticalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell>
+                            <Grid Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+                                <Frame BorderColor="White" 
+                                    WidthRequest="-10" 
+                                    HeightRequest="-10"
+                                    Grid.Column="0"/>
+                                <Label Text="Facturacion"
+                                    TextColor="Black"
+                                    FontSize="Small" 
+                                    Grid.Column="1"
+                                    VerticalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell>
+                            <Grid Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+                                <Frame BorderColor="White" 
+                                    WidthRequest="-10" 
+                                    HeightRequest="-10"
+                                    Grid.Column="0"/>
+                                <Label Text="Inventario"
+                                    TextColor="Black"
+                                    FontSize="Small" 
+                                    Grid.Column="1"
+                                    VerticalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell>
+                            <Grid Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+                                <Frame BorderColor="White" 
+                                    WidthRequest="-10" 
+                                    HeightRequest="-10"
+                                    Grid.Column="0"/>
+                                <Label Text="Reporteria"
+                                    TextColor="Black"
+                                    FontSize="Small" 
+                                    Grid.Column="1"
+                                    VerticalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+                        
+                        <ViewCell>
+                            <Grid Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+                                
+                                <Frame BorderColor="White" 
+                                    WidthRequest="-10" 
+                                    HeightRequest="-10"
+                                    Grid.Column="0"/>
+                                
+                                <Label Text="Cuentas"
+                                    TextColor="Black"
+                                    FontSize="Small" 
+                                    Grid.Column="1"
+                                    VerticalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

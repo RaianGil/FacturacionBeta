@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FacaiboBETA.Views.Login">
+             x:Class="FacaiboBETA.Views.Login"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
             <Grid BackgroundColor="Red"
@@ -30,7 +31,7 @@
                 <Label
                     x:Name="lblTitulo"
                     Text="Login"
-                    FontSize="Header"
+                    FontSize="50"
                     HorizontalOptions="CenterAndExpand"
                     Margin="30"/>
                 <Entry
@@ -39,35 +40,47 @@
                     WidthRequest="300"
                     Placeholder="Username"
                     Margin="10,20"
-                    />
+                    Completed="entUsername_Completed"/>
 
                 <Entry
                     x:Name="entPassword"
                     FontSize="Medium"
                     Placeholder="Password"
+                    IsPassword="True"
                     Margin="10,20"
-                    />
+                    Completed="entPassword_Completed"/>
                 <Grid
                     Margin="10,20">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="90"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Switch Grid.Column="0">
-                        
-                    </Switch>
+                    <Switch 
+                        x:Name="swRemenberAcount"
+                        Grid.Column="0"
+                        HorizontalOptions="End"/>
+                    
                     <Label
                         Text="Recuerda mi Usuario"
                         Grid.Column="1"
                         FontSize="Medium"
+                        HorizontalOptions="Start"
                         />
                 </Grid>
+                <Label x:Name="lblErrorMSG"
+                       FontSize="Medium"
+                       Text=""
+                       TextColor="Red"
+                       HorizontalOptions="Center"
+                       IsVisible="False"
+                       />
                 <Button
                     x:Name="btnAccesar"
                     Text="Accesar"
                     FontSize="Medium"
                     Margin="10,20"
                     Padding="10"
+                    Clicked="btnAccesar_Clicked"
                     />
             </StackLayout>
         </StackLayout>

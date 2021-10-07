@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="FacaiboBETA.Components.Popup.InfoPopup">
+    <StackLayout>
+        <Frame
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand">
+            <StackLayout WidthRequest="350">
+                <Grid/>
+                <Label 
+                    Text="Informacion"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"/>
+                <StackLayout Margin="0,10,0,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="130"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label 
+                            Grid.Column="0"
+                            Text="Nombre App:"
+                            HorizontalOptions="Start"
+                            FontSize="Medium"
+                            FontAttributes="Bold"/>
+                        <Label
+                            Grid.Column="1"
+                            Text="Facturacion Mobile" 
+                            FontSize="Medium"/>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="130"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label 
+                            Grid.Column="0"
+                            Text="Version:"
+                            HorizontalOptions="Start"
+                            FontSize="Medium"
+                            FontAttributes="Bold"/>
+                        <Label
+                            x:Name="entVersion"
+                            Grid.Column="1"
+                            Text="1.0.0.1" 
+                            FontSize="Medium"/>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="130"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label 
+                            Grid.Column="0"
+                            Text="Desarrollo:"
+                            HorizontalOptions="Start"
+                            FontSize="Medium"
+                            FontAttributes="Bold"/>
+                        <Label
+                            Grid.Column="1"
+                            Text="T2 Soluction" 
+                            FontSize="Medium"/>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="130"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label 
+                            Grid.Column="0"
+                            Text="Cel/WhatsApp:"
+                            HorizontalOptions="Start"
+                            FontSize="Medium"
+                            FontAttributes="Bold"/>
+                        <Label
+                            Grid.Column="1"
+                            Text="+1(849) 848-1600" 
+                            FontSize="Medium"/>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="130"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label 
+                            Grid.Column="0"
+                            Text="Email:"
+                            HorizontalOptions="Start"
+                            FontSize="Medium"
+                            FontAttributes="Bold"/>
+                        <Label
+                            Grid.Column="1"
+                            Text="ventas.t2soluctions@gmail.com" 
+                            FontSize="Small"/>
+                    </Grid>
+                    <Button
+                        x:Name="btnClosePopup"
+                        Margin="0,10,0,0"
+                        Text="Cerrar"
+                        Background="White"
+                        TextColor="Red"
+                        Clicked="btnClosePopup_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</popup:PopupPage >

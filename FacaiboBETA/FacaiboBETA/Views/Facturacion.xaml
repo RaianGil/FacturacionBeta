@@ -1,120 +1,133 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FacaiboBETA.Views.Facturacion">
-    <ContentPage.Content>
-        <StackLayout Padding="0"
-                     Orientation="Vertical"
-                     VerticalOptions="Start">
-            <Grid BackgroundColor="Red"
+             x:Class="FacaiboBETA.Views.Facturacion"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout>
+        <Grid BackgroundColor="Red"
                   Padding="5">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="40" />
-                </Grid.RowDefinitions>
-                <Label  Text="Facturacion"
-                            TextColor="White"
-                            FontSize="Large"
-                            Grid.Column="0"
-                            HorizontalOptions="Start"/>
-                <Button Text="O" 
-                            Background="Red" 
-                            BorderColor="White"
-                            Grid.Column="1"
-                            HorizontalOptions="End"
-                            TextColor="White"/>
-            </Grid>
-            <Frame BackgroundColor="#F5F5F5" CornerRadius="0" Margin="0">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="200"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="35"/>
-                        <RowDefinition Height="35"/>
-                    </Grid.RowDefinitions>
-                    <Label Grid.Column="0" 
-                           Text="Buscar producto"
-                           HorizontalOptions="Start"
-                           FontSize="Medium"/>
-                    <Entry Grid.Column="1" 
-                           HorizontalOptions="FillAndExpand"
-                           FontSize="Small"/>
-                    <ListView Grid.Row="1" 
-                              Grid.Column="1">
-                        <ListView.ItemsSource>
-                            <x:Array Type="{x:Type x:String}">
-                                <x:String>mono</x:String>
-                                <x:String>monodroid</x:String>
-                                <x:String>monotouch</x:String>
-                                <x:String>monorail</x:String>
-                                <x:String>monodevelop</x:String>
-                                <x:String>monotone</x:String>
-                                <x:String>monopoly</x:String>
-                                <x:String>monomodal</x:String>
-                                <x:String>mononucleosis</x:String>
-                            </x:Array>
-                        </ListView.ItemsSource>
-                    </ListView>
-                </Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton 
+                        x:Name="btnMenu"
+                        Source="menuIcon"
+                        HeightRequest="30"
+                        BackgroundColor="Red"
+                        Clicked="btnMenu_Clicked"
+                        />
+                <Label 
+                        Text="Nombre App"
+                        TextColor="White"
+                        FontSize="Small"
+                        Grid.Column="0"
+                        VerticalOptions="Center"/>
+            </StackLayout>
+            <Frame BorderColor="White" 
+                       WidthRequest="-10" 
+                       HeightRequest="-10"
+                       HorizontalOptions="EndAndExpand"
+                       Grid.Column="1">
+
             </Frame>
-            <StackLayout Padding="15">
-            <!--<TableView>
-                <TableRoot>
-                    <TableSection>
-                        <ViewCell>
-                            <Grid Padding="5">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                </Grid.RowDefinitions>
-                                
-                                <Label Text="Hola mundo" 
-                                       Grid.Column="0"
-                                       FontSize="Small"/>
-                                
-                                <Label Text="Hola mundo" 
-                                       Grid.Column="1"
-                                       FontSize="Small"/>
-                                
-                                <Label Text="Hola mundo" 
-                                       Grid.Column="2"
-                                       FontSize="Small"/>
-                            </Grid>
-                        </ViewCell>
-                        <ViewCell>
-                            <Grid Padding="5">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                </Grid.RowDefinitions>
-                                <Label Text="Hola mundo" 
-                                       Grid.Column="0"
-                                       FontSize="Small"/>
-                                <Label Text="Hola mundo" 
-                                       Grid.Column="1"
-                                       FontSize="Small"/>
-                                <Label Text="Hola mundo" 
-                                       Grid.Column="2"
-                                       FontSize="Small"/>
-                            </Grid>
-                        </ViewCell>
-                    </TableSection>
-                </TableRoot>
-            </TableView> -->
-                
-                
+        </Grid>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Padding="15">
+                    <StackLayout Margin="0,0,0,20">
+                        <Label
+                                x:Name="lblCompanyName"
+                                Text="Alimentos Nohely LB CA"
+                                FontSize="Medium"
+                                />
+                        <Label
+                                x:Name="lblCompanyDir"
+                                Text="Las Acacias Apto 11 Edif 4C"
+                                FontSize="Body"
+                                />
+                        <Label
+                                x:Name="lblCompanyTaxRecord"
+                                Text="RNC: 130060401"
+                                FontSize="Body"
+                                />
+                    </StackLayout>
+
+                <StackLayout>
+                    <Label
+                            Text="Cliente" 
+                            FontSize="Medium"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <Entry
+                            x:Name="entClientName" />
+                        <Button
+                                x:Name="btnAddClient"
+                                Text="+" 
+                                Grid.Column="1"/>
+                    </Grid>
+
+                    <Label
+                            Text="Forma de pago" 
+                            FontSize="Medium"/>
+                    <Picker
+                            x:Name="pkPayType"
+                            />
+
+                    <Label
+                            Text="Metodo de pago" 
+                            FontSize="Medium"/>
+                    <Picker
+                            x:Name="pkPayMethod"/>
+
+                    <StackLayout
+                            x:Name="slBankEntity"
+                            IsVisible="False">
+                        <Label
+                                Text="Entidad Bancaria" 
+                                FontSize="Medium"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="40"/>
+                            </Grid.ColumnDefinitions>
+                            <Picker
+                                    x:Name="pkBankEntity"/>
+                            <Button
+                                    x:Name="btnAddBankEntity"
+                                    Text="+" 
+                                    Grid.Column="1"/>
+                        </Grid>
+                    </StackLayout>
+
+                    <Label
+                            Text="Producto" 
+                            FontSize="Medium"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <Picker
+                                    x:Name="pkProduct"/>
+                        <Button
+                                    x:Name="btnSearchProduct"
+                                    Text="i" 
+                                    Grid.Column="1"/>
+                    </Grid>
+                    <Label
+                        Text="Precio" 
+                        FontSize="Medium"/>
+                        <Entry
+                        x:Name="entPrecio" 
+                        IsEnabled="False"/>
+                    </StackLayout>
             </StackLayout>
         </StackLayout>
-    </ContentPage.Content>
+        </ScrollView>
+    </StackLayout>
 </ContentPage>

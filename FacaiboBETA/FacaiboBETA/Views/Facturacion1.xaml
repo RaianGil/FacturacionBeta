@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FacaiboBETA.Views.Facturacion1"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout>
+        <Grid 
+            BackgroundColor="Red"
+            Padding="5"
+            HeightRequest="60">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton 
+                        x:Name="btnMenu"
+                        Source="menuIcon"
+                        HeightRequest="30"
+                        BackgroundColor="Red"
+                        Clicked="btnMenu_Clicked"
+                        />
+                <Label 
+                        Text="Nombre App"
+                        TextColor="White"
+                        FontSize="Small"
+                        Grid.Column="0"
+                        VerticalOptions="Center"/>
+            </StackLayout>
+            <Frame BorderColor="White" 
+                       WidthRequest="-10" 
+                       HeightRequest="-10"
+                       HorizontalOptions="EndAndExpand"
+                       Grid.Column="1">
+
+            </Frame>
+        </Grid>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Padding="15">
+                    <StackLayout Margin="0,0,0,20">
+                        <Label
+                                x:Name="lblCompanyName"
+                                Text="Alimentos Nohely LB CA"
+                                FontSize="Medium"
+                                />
+                        <Label
+                                x:Name="lblCompanyDir"
+                                Text="Las Acacias Apto 11 Edif 4C"
+                                FontSize="Body"
+                                />
+                        <Label
+                                x:Name="lblCompanyTaxRecord"
+                                Text="RNC: 130060401"
+                                FontSize="Body"
+                                />
+                    </StackLayout>
+
+                <StackLayout>
+                    <Label
+                            Text="Cliente" 
+                            FontSize="Medium"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <Picker
+                            x:Name="picClientName" 
+                            SelectedItem="{Binding ClientID}"
+                            ItemDisplayBinding="{Binding ClientName}"
+                            SelectedIndexChanged="picClientName_SelectedIndexChanged"/>
+                        <Button
+                            x:Name="btnAddClient"
+                            Text="+" 
+                            Grid.Column="1"
+                            Clicked="btnAddClient_Clicked"/>
+                    </Grid>
+
+                    <Label
+                        Text="Forma de pago" 
+                        FontSize="Medium"/>
+                    <Picker
+                        x:Name="pkPayType"
+                        />
+
+                    <Label
+                        Text="Metodo de pago" 
+                        FontSize="Medium"/>
+                    <Picker
+                        x:Name="pkPayMethod"/>
+
+                    <StackLayout
+                            x:Name="slBankEntity"
+                            IsVisible="False">
+                        <Label
+                            Text="Entidad Bancaria" 
+                            FontSize="Medium"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="40"/>
+                            </Grid.ColumnDefinitions>
+                            <Picker
+                                x:Name="pkBankEntity"/>
+                            <Button
+                                x:Name="btnAddBankEntity"
+                                Text="+" 
+                                Grid.Column="1"/>
+                        </Grid>
+                    </StackLayout>
+
+                    <Label
+                        Text="Producto" 
+                        FontSize="Medium"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <Picker
+                            x:Name="pkProduct"/>
+                        <Button
+                            x:Name="btnSearchProduct"
+                            Text="i" 
+                            Grid.Column="1"/>
+                    </Grid>
+                    <Label
+                        Text="Precio" 
+                        FontSize="Medium"/>
+                    <Entry
+                        x:Name="entPrecio" 
+                        IsEnabled="False"/>
+                        <Button 
+                        x:Name="btnPruebaStanley"
+                        Text="Add Row"
+                        Clicked="btnPruebaStanley_Clicked"/>
+                    
+                        <ListView x:Name="lvFactura">
+                            <ListView.Header>
+                                <Grid BackgroundColor="Black">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Producto" 
+                                           HorizontalOptions="Fill"  
+                                           Grid.Column="0" 
+                                           FontSize="Medium" 
+                                           FontAttributes="Bold" 
+                                           BackgroundColor="Red" 
+                                           TextColor="White" 
+                                           HorizontalTextAlignment="Center"
+                                           Padding="5"/>
+                                    
+                                    <Label Text="Qty" 
+                                           HorizontalOptions="Fill" 
+                                           Grid.Column="1"  
+                                           FontSize="Medium" 
+                                           FontAttributes="Bold" 
+                                           BackgroundColor="Red" 
+                                           TextColor="White" 
+                                           HorizontalTextAlignment="Center"
+                                           Padding="5"/>
+                                    
+                                    <Label Text="Precio" 
+                                           HorizontalOptions="Fill" 
+                                           Grid.Column="2" 
+                                           FontSize="Medium" 
+                                           FontAttributes="Bold" 
+                                           BackgroundColor="Red" 
+                                           TextColor="White" 
+                                           HorizontalTextAlignment="Center"
+                                           Padding="5"/>
+                                </Grid>
+                            </ListView.Header>
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid BackgroundColor="Black">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200"/>
+                                                <ColumnDefinition Width="50"/>
+                                                <ColumnDefinition Width="1*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" Text ="{Binding Producto}" 
+                                                   HorizontalOptions="Fill" 
+                                                   BackgroundColor="White" 
+                                                   HorizontalTextAlignment="Center" 
+                                                   VerticalTextAlignment="Center"/>
+                                            
+                                            <Label Grid.Column="1" Text ="{Binding Cantidad}" 
+                                                   HorizontalOptions="Fill" 
+                                                   BackgroundColor="White"
+                                                   HorizontalTextAlignment="Center" 
+                                                   VerticalTextAlignment="Center" />
+
+                                            <Label Grid.Column="2" 
+                                                   Text ="{Binding Precio}" 
+                                                   HorizontalOptions="Fill" 
+                                                   BackgroundColor="White" 
+                                                   HorizontalTextAlignment="Center" 
+                                                   VerticalTextAlignment="Center"/>
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+            </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

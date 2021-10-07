@@ -23,10 +23,9 @@
                         <Label 
                             Grid.Column="0"
                             Text="Nombre App:"
-                            HorizontalOptions="Start"
+                            HorizontalOptions="EndAndExpand"
                             FontSize="Medium"
-                            FontAttributes="Bold"
-                            HorizontalTextAlignment="End"/>
+                            FontAttributes="Bold"/>
                         <Label
                             Grid.Column="1"
                             Text="Facturacion Mobile" 
@@ -40,10 +39,9 @@
                         <Label 
                             Grid.Column="0"
                             Text="Version:"
-                            HorizontalOptions="Start"
+                            HorizontalOptions="EndAndExpand"
                             FontSize="Medium"
-                            FontAttributes="Bold"
-                            HorizontalTextAlignment="End"/>
+                            FontAttributes="Bold"/>
                         <Label
                             x:Name="entVersion"
                             Grid.Column="1"
@@ -58,10 +56,9 @@
                         <Label 
                             Grid.Column="0"
                             Text="Desarrollo:"
-                            HorizontalOptions="Start"
+                            HorizontalOptions="EndAndExpand"
                             FontSize="Medium"
-                            FontAttributes="Bold"
-                            HorizontalTextAlignment="End"/>
+                            FontAttributes="Bold"/>
                         <Label
                             Grid.Column="1"
                             Text="T2 Soluction" 
@@ -75,10 +72,9 @@
                         <Label 
                             Grid.Column="0"
                             Text="Cel/WhatsApp:"
-                            HorizontalOptions="Start"
+                            HorizontalOptions="EndAndExpand"
                             FontSize="Medium"
-                            FontAttributes="Bold"
-                            HorizontalTextAlignment="End"/>
+                            FontAttributes="Bold"/>
                         <Label
                             Grid.Column="1"
                             Text="+1(849) 848-1600" 
@@ -92,13 +88,13 @@
                         <Label 
                             Grid.Column="0"
                             Text="Email:"
-                            HorizontalOptions="Start"
+                            HorizontalOptions="EndAndExpand"
                             FontSize="Medium"
-                            FontAttributes="Bold"
-                            HorizontalTextAlignment="End"/>
+                            FontAttributes="Bold"/>
                         <Label
                             Grid.Column="1"
                             Text="ventas.t2soluctions@gmail.com" 
+                            VerticalOptions="Center"
                             FontSize="Small"/>
                     </Grid>
                     <Button

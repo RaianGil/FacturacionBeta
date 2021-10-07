@@ -25,7 +25,8 @@
                             Text="Nombre App:"
                             HorizontalOptions="Start"
                             FontSize="Medium"
-                            FontAttributes="Bold"/>
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="End"/>
                         <Label
                             Grid.Column="1"
                             Text="Facturacion Mobile" 
@@ -41,7 +42,8 @@
                             Text="Version:"
                             HorizontalOptions="Start"
                             FontSize="Medium"
-                            FontAttributes="Bold"/>
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="End"/>
                         <Label
                             x:Name="entVersion"
                             Grid.Column="1"
@@ -58,7 +60,8 @@
                             Text="Desarrollo:"
                             HorizontalOptions="Start"
                             FontSize="Medium"
-                            FontAttributes="Bold"/>
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="End"/>
                         <Label
                             Grid.Column="1"
                             Text="T2 Soluction" 
@@ -74,7 +77,8 @@
                             Text="Cel/WhatsApp:"
                             HorizontalOptions="Start"
                             FontSize="Medium"
-                            FontAttributes="Bold"/>
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="End"/>
                         <Label
                             Grid.Column="1"
                             Text="+1(849) 848-1600" 
@@ -90,7 +94,8 @@
                             Text="Email:"
                             HorizontalOptions="Start"
                             FontSize="Medium"
-                            FontAttributes="Bold"/>
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="End"/>
                         <Label
                             Grid.Column="1"
                             Text="ventas.t2soluctions@gmail.com" 

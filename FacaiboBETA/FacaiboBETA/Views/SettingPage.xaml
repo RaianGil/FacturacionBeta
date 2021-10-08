@@ -7,7 +7,7 @@
         <StackLayout>
             <Grid 
                 BackgroundColor="Red"
-                Padding="5,10">
+                Padding="5,7">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
@@ -23,7 +23,7 @@
                     <Label 
                         Text="Configuracion"
                         TextColor="White"
-                        FontSize="Small"
+                        FontSize="Medium"
                         Grid.Column="0"
                         VerticalOptions="Center"/>
                 </StackLayout>

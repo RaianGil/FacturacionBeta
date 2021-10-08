@@ -43,7 +43,29 @@ namespace FacaiboBETA.Views
             showAddClient();
         }
 
-        public async void showAddClient() 
+        private void picClientName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var inPedra = new cbClient();
+            inPedra = (cbClient) picClientName.SelectedItem;
+            Debug.WriteLine(inPedra.ClientID);
+        }
+        private void btnSetting_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SettingPage());
+        }
+        private void PTimer()
+        {
+            Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+            {
+                if (!GlobalVar.OpenPopup())
+                {
+                    refreshClient();
+                    return false;
+                }
+                return true;
+            });
+        }
+        public async void showAddClient()
         {
             var addClientP = new AddClient();
             var popAnimation = new PopupAnimation();
@@ -56,26 +78,6 @@ namespace FacaiboBETA.Views
             var lsClient = new loadClientPicker();
             picClientName.ItemsSource = lsClient.get();
             Debug.WriteLine("Client Refresh");
-        }
-
-        private void picClientName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var inPedra = new cbClient();
-            inPedra = (cbClient) picClientName.SelectedItem;
-            Debug.WriteLine(inPedra.ClientID);
-        }
-
-        private void PTimer()
-        {
-            Device.StartTimer(TimeSpan.FromSeconds(1), () =>
-            {
-                if (!GlobalVar.OpenPopup())
-                {
-                    refreshClient();
-                    return false;
-                }
-                return true;
-            });
         }
     }
 }

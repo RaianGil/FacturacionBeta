@@ -45,7 +45,7 @@ namespace FacaiboBETA.Views
         {
             if (username != null)
                 saveInSetting();
-            Navigation.PushAsync(new SettingPage());
+            Navigation.PushAsync(new Container());
         }
         public AppLogin loadData()
         {

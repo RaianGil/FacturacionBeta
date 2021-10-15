@@ -37,14 +37,17 @@
                     Clicked="btnInfo_Clicked"/>
             </Grid>
             <ScrollView>
-                <StackLayout>
-                    <StackLayout Padding="15">
+                <StackLayout Padding="15">
+                    <!-- #region Main Setting -->
+                    <StackLayout
+                        x:Name="SettingE">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Switch 
+                                x:Name="swManageInventary"
                                 Grid.Column="0"
                                 HorizontalOptions="Start"/>
                             <Label
@@ -58,6 +61,21 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Switch 
+                                x:Name="swManageProductCode"
+                                Grid.Column="0"
+                                HorizontalOptions="Start"/>
+                            <Label
+                                Grid.Column="1"
+                                Text="Manejar Codigo Producto" 
+                                FontSize="Medium"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Switch 
+                                x:Name="swControlBankingEntity"
                                 Grid.Column="0"
                                 HorizontalOptions="Start"/>
                             <Label
@@ -71,6 +89,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Switch 
+                                x:Name="swControlRNC"
                                 Grid.Column="0"
                                 HorizontalOptions="Start"/>
                             <Label
@@ -84,6 +103,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Switch 
+                                x:Name="swControlPayMethod"
                                 Grid.Column="0"
                                 HorizontalOptions="Start"/>
                             <Label
@@ -97,6 +117,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Switch 
+                                x:Name="swControlClientData"
                                 Grid.Column="0"
                                 HorizontalOptions="Start"/>
                             <Label
@@ -110,6 +131,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Switch 
+                                x:Name="swControlTaxes"
                                 Grid.Column="0"
                                 HorizontalOptions="Start"/>
                             <Label
@@ -127,8 +149,28 @@
                                     Grid.Column="0"
                                     Text="Guardar"/>
                                 <Button 
+                                    x:Name="btnShowCompanyInfo"
                                     Grid.Column="1"
-                                    Text="Datos Empresa"/>
+                                    Text="Datos Empresa"
+                                    Clicked="btnShowCompanyInfo_Clicked"/>
+                            </Grid>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Button 
+                                    x:Name="btnAddProduct"
+                                    Grid.Column="0"
+                                    Text="Agregar Producto"
+                                    Clicked="btnAddProduct_Clicked"/>
+                                
+                                <Button 
+                                    x:Name="btnShowProductList"
+                                    Grid.Column="1"
+                                    Text="Lista Productos"
+                                    Clicked="btnShowProductList_Clicked"/>
                             </Grid>
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -137,13 +179,191 @@
                                 </Grid.ColumnDefinitions>
                                 <Button 
                                     Grid.Column="0"
-                                    Text="Lista Productos"/>
+                                    Text="Cerrar"/>
+                                
                                 <Button 
                                     Grid.Column="1"
                                     Text="Datos Tablas"/>
                             </Grid>
                         </StackLayout>
                     </StackLayout>
+                    <!-- #endregion -->
+                    <!-- #region Setting - AddProuct -->
+                    <StackLayout
+                        x:Name="SettingProduct"
+                        IsVisible="false"
+                        Opacity="0">
+                        <Label
+                            Text="Nuevo Producto"
+                            FontSize="20"
+                            FontAttributes="Bold"/>
+                        <StackLayout Margin="0,10,0,0">
+                            <Label
+                                Text="Nombre Producto"
+                                FontSize="Medium"/>
+                            <Entry
+                                x:Name="entProductName"/>
+
+                            <Label
+                                Text="Categoria"
+                                FontSize="Medium"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Picker
+                                    x:Name="pkCategory" 
+                                    SelectedItem="{Binding CategoryID}"
+                                    ItemDisplayBinding="{Binding CategoryName}"
+                                    SelectedIndexChanged="pkCategory_SelectedIndexChanged"/>
+                                <Button
+                                    x:Name="btnAddCategory"
+                                    Text="+" 
+                                    Grid.Column="1"
+                                    Clicked="btnAddCategory_Clicked"/>
+                            </Grid>
+
+                            <Label
+                                Text="Codigo Producto"
+                                FontSize="Medium"/>
+                            <Entry
+                                x:Name="entProductCode"/>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button
+                                    Grid.Column="1"
+                                    x:Name="btnSaveProduct"
+                                    Text="Guardar"
+                                    Clicked="btnSaveProduct_Clicked"/>
+                                <Button
+                                    x:Name="btnCloseAddProduct"
+                                    Text="Atras"
+                                    Clicked="btnCloseAddProduct_Clicked"/>
+                            </Grid>
+
+                        </StackLayout>
+                    </StackLayout>
+                    <!-- #endregion -->
+                    <!-- #region Setting - CompanyData -->
+                    <StackLayout
+                        x:Name="SettingCompanyData"
+                        IsVisible="false"
+                        Opacity="0">
+                        <Label
+                            Text="Datos Empresa"
+                            FontSize="20"
+                            FontAttributes="Bold"/>
+                        <StackLayout Margin="0,10,0,0">
+                            <Label
+                                Text="Razon Social"
+                                FontSize="Medium"/>
+                            <Entry
+                                x:Name="entCompanyName"/>
+
+                            <Label
+                                Text="RNC"
+                                FontSize="Medium"/>
+                            <Entry 
+                                x:Name="entCompanyRNC"/>
+
+                            <Label
+                                Text="Direccion Empresa"
+                                FontSize="Medium"/>
+                            <Entry 
+                                x:Name="entCompanyDir"/>
+
+                            <Label
+                                Text="Telefono Compania"
+                                FontSize="Medium"/>
+                            <Entry 
+                                x:Name="entCompanyPhone"/>
+                            
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button
+                                    Grid.Column="1"
+                                    x:Name="btnSaveCompanyInfo"
+                                    Text="Guardar"
+                                    Clicked="btnSaveCompanyInfo_Clicked"/>
+                                <Button
+                                    x:Name="btnCloseCompanyInfo"
+                                    Text="Atras"
+                                    Clicked="btnCloseCompanyInfo_Clicked"/>
+                            </Grid>
+                        </StackLayout>
+                    </StackLayout>
+                    <!-- #endregion -->
+                    <!-- #region Setting - ProductList -->
+                    <StackLayout
+                        x:Name="SettingProductList"
+                        IsVisible="false"
+                        Opacity="0">
+                        <Label
+                            Text="Lista de Producto"
+                            FontSize="20"
+                            FontAttributes="Bold"/>
+                        <StackLayout Margin="0,10,0,0">
+                            <Label
+                                Text="Buscar Productos"
+                                FontSize="Medium"/>
+                            <Entry
+                                x:Name="entSearchProduct"
+                                TextChanged="entSearchProduct_TextChanged"/>
+
+                            <Label
+                                Text="Producto Filtrados"
+                                FontSize="Medium"
+                                FontAttributes="Bold"/>
+                            
+                            <ListView
+                                x:Name="lvFilterProduct"
+                                SelectedItem="{Binding ProductID}"
+                                RowHeight="40"
+                                HeightRequest="200"
+                                ItemSelected="lvFilterProduct_ItemSelected">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <Label 
+                                                Text="{Binding ProductDescription}" 
+                                                FontSize="Medium"
+                                                VerticalOptions="Center"
+                                                Padding="10,0"/>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button
+                                    Grid.Column="0"
+                                    x:Name="btnDropProduct"
+                                    Text="Borrar"
+                                    Clicked="btnDropProduct_Clicked"/>
+                                <Button
+                                    Grid.Column="1"
+                                    x:Name="btnModifyProduct"
+                                    Text="Editar"
+                                    Clicked="btnModifyProduct_Clicked"/>
+                            </Grid>
+                            <Button
+                                x:Name="btnCloseList"
+                                Text="Atras"
+                                Clicked="btnCloseList_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <!-- #endregion -->
                 </StackLayout>
             </ScrollView>
         </StackLayout>

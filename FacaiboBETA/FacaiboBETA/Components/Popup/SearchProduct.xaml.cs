@@ -16,6 +16,12 @@ namespace FacaiboBETA.Components.Popup
         public SearchProduct()
         {
             InitializeComponent();
+            List<String> lstrPrueba = new List<String>();
+            lstrPrueba.Add("Prueba100");
+            lstrPrueba.Add("Prueba101");
+            lstrPrueba.Add("Prueba102");
+            lstrPrueba.Add("Prueba103");
+            lvProduct.ItemsSource = lstrPrueba;
         }
     }
 }

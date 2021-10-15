@@ -11,6 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microcharts" Version="0.9.5.9" />
+    <PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
     <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="5.0.10" />
     <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.12" />
     <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
@@ -25,8 +27,8 @@
     <Compile Update="Components\Popup\InfoPopup.xaml.cs">
       <DependentUpon>InfoPopup.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Components\Popup\SearchProduct.xaml.cs">
-      <DependentUpon>SearchProduct.xaml</DependentUpon>
+    <Compile Update="Components\Popup\AddCategory.xaml.cs">
+      <DependentUpon>AddCategory.xaml</DependentUpon>
     </Compile>
     <Compile Update="Container.xaml.cs">
       <DependentUpon>Container.xaml</DependentUpon>
@@ -36,6 +38,9 @@
     </Compile>
     <Compile Update="Views\FacturacionBeta.xaml.cs">
       <DependentUpon>FacturacionBeta.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -62,6 +67,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Page1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SettingPage.xaml">

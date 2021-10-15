@@ -126,6 +126,7 @@
                             <Button
                                 x:Name="btnSearchProduct"
                                 Text="i" 
+                                Clicked="btnSearchProduct_Clicked"
                                 Grid.Column="1"/>
                         </Grid>
                         <Label

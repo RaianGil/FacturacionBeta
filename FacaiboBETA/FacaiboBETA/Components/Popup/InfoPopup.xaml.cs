@@ -20,7 +20,6 @@ namespace FacaiboBETA.Components.Popup
         {
             InitializeComponent();
         }
-
         private void btnClosePopup_Clicked(object sender, EventArgs e)
         {
             PopupAnimation.ClosePopup();

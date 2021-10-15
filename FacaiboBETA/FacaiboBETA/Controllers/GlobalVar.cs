@@ -14,6 +14,16 @@ namespace FacaiboBETA.Controllers
             //Set DB_PATH
             Preferences.Set("DB_PATH", inPath);
         }
+        public static string UserLog()
+        {
+            //Get USER_LOG
+            return Preferences.Get("USER_LOG", "");
+        }
+        public static void UserLog(string inUserLog)
+        {
+            //Get USER_LOG
+            Preferences.Set("USER_LOG", inUserLog);
+        }
         public static bool OpenPopup()
         {
             //Get OPEN_POPUP

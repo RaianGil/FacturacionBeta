@@ -15,6 +15,7 @@ namespace FacaiboBETA.Controllers.LocalDB
             Product();
             Client();
             Contact();
+            CompanyInfo();
         }
 
         public static void User()
@@ -40,6 +41,10 @@ namespace FacaiboBETA.Controllers.LocalDB
         public static void Contact()
         {
             SQLiteConn.CreateTable<infoClient>();
+        }
+        public static void CompanyInfo()
+        {
+            SQLiteConn.CreateTable<CompanyInfo>();
         }
     }
 }

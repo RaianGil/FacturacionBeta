@@ -53,6 +53,10 @@ namespace FacaiboBETA.Views
         {
             Navigation.PushAsync(new SettingPage());
         }
+        private void btnSearchProduct_Clicked(object sender, EventArgs e)
+        {
+            showSearchProduct();
+        }
         private void PTimer()
         {
             Device.StartTimer(TimeSpan.FromSeconds(1), () =>
@@ -79,5 +83,13 @@ namespace FacaiboBETA.Views
             picClientName.ItemsSource = lsClient.get();
             Debug.WriteLine("Client Refresh");
         }
+        public async void showSearchProduct()
+        {
+            var searchProduct = new SearchProduct();
+            var popAnimation = new PopupAnimation();
+            GlobalVar.OpenPopup(true);
+            popAnimation.ShowHorizontal(searchProduct);
+        }
+
     }
 }

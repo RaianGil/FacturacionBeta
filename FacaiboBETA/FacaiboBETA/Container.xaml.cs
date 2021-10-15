@@ -14,7 +14,7 @@ namespace FacaiboBETA.Views
         {
             InitializeComponent();
             this.Master = new LeftMenu();
-            this.Detail = new NavigationPage(new Facturacion1());
+            this.Detail = new NavigationPage(new MainPage());
             eventLeftMenu.inContainer = this;
 
 

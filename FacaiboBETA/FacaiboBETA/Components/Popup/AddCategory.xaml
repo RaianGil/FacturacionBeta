@@ -2,7 +2,7 @@
 <popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
-             x:Class="FacaiboBETA.Components.Popup.SearchProduct">
+             x:Class="FacaiboBETA.Components.Popup.AddCategory">
     <StackLayout>
         <Frame
             VerticalOptions="CenterAndExpand" 
@@ -10,18 +10,14 @@
             <StackLayout WidthRequest="350">
                 <Grid/>
                 <Label 
-                    Text="Nuevo cliente"
+                    Text="Nuevo Categoria"
                     FontSize="Large"
                     FontAttributes="Bold"/>
                 <StackLayout Margin="0,10,0,0">
                     <Entry
-                        x:Name="entClientName"
-                        FontSize="Medium"/>
-                    
-                    <ListView
-                        x:Name="lvProduct"
-                        RowHeight="40"/>
-
+                        x:Name="entCategory"
+                        FontSize="Medium"
+                        Completed="entCategory_Completed"/>
                 </StackLayout>
             </StackLayout>
         </Frame>

@@ -27,8 +27,8 @@ namespace FacaiboBETA.Controllers.LocalDB.Table
         {
             Client insertClient = new Client();
             insertClient.ClientID = Guid.NewGuid().ToString();
-            insertClient.ClientName = this.ClientName;
-            insertClient.ClientRNC = this.ClientRNC;
+            insertClient.ClientName = this.ClientName.Trim().ToUpper();
+            insertClient.ClientRNC = this.ClientRNC.Trim().ToUpper();
             SQLiteConn.Insert(insertClient);
 
             return insertClient.ClientID;
